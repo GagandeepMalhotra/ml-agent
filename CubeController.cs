@@ -20,11 +20,11 @@ public class CubeController : MonoBehaviour
         float moveInput = Input.GetAxis("Vertical");
         float rotateInput = Input.GetAxis("Horizontal");
 
-        // Move the tank forward or backward
+        // Move the cube forward or backward
         Vector3 movement = transform.forward * moveInput * moveSpeed * Time.deltaTime;
         rb.MovePosition(rb.position + movement);
 
-        // Rotate the tank left or right
+        // Rotate the cube left or right
         Quaternion rotation = Quaternion.Euler(Vector3.up * rotateInput * rotationSpeed * Time.deltaTime);
         rb.MoveRotation(rb.rotation * rotation);
     }
